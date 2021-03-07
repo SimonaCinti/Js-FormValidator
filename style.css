@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+* {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Declare global Var */
+:root {
+    --success-color: #43cc2e;
+    --error-color:#cc3b2e;
+    --bg-color: rgb(59, 155, 223);
+}
+
+/* Main style */
+
+body {
+    background-color: rgb(198, 198, 198);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 30px;
+    color: white;
+}
+
+.container {
+    background: var(--bg-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    width: 500px;
+}
+
+/*  Form  */
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid white;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.form-control input:focus{
+    outline: 0;
+    border-color: rgb(28, 30, 80);
+}
+
+.form button {
+    cursor: pointer;
+    background: #2d84a4;
+    border: 2px solid #2d84a4;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.form button:hover {
+    background: #0c475c;
+}
+
+/*  Check Form */
+.form-control.success input{
+    border-color: var(--success-color);
+}
+ 
+.form-control.error input{
+    border-color: var(--error-color);
+}
+
+.form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
